@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h4{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(230, 109, 109);
+    text-decoration: underline;
+    font-size: 30px;
+}
+ul{
+    margin-left: 15px;
+}
+ol{
+    margin-left: 15px;
+}
+li{
+    margin-left: 15px;
+}

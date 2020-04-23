@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge JS</title>
+    <link rel="stylesheet" href="Style.css">
+    
+</head>
+<body>
+    <!-------------------Array 1------------------->
+    <script>
+      const texasss = [
+      { name: 'Mike', age: 23, gender: 'm', us: false,},
+      { name: 'Liz', age: 20, gender: 'f', us: true, },
+      { name: 'Chris', age: 102, gender: 'm', us: true, },
+      { name: 'Chuloo', age: 27, gender: 'm', us: false, },
+      { name: 'Annie', age: 30, gender: 'f', us: true, },
+    ];
+// Part 1 - Find all users older than 24
+document.write('<h4>all users older than 24:</h4>');
+  //Parcourir un tableau
+  document.write("<ul>");
+    var somme=0;
+
+  for (const element of texasss) {
+    //Calcul Somme Age
+    somme = somme+ element.age;
+
+    //TEST + AFFICHAGE
+    if(element.age>24)
+      document.write("<li>"+element.name+"</li>");
+  }
+  document.write("</ul>");
+// Part 2 - Find the total age of all users
+document.write('<h4>the total age of all users:</h4>');
+  //Afficher la somme ::
+  document.write("Le total est : "+somme);
+
+// Part 3 - List all female coders
+document.write('<h4>all female coders:</h4>');
+//Afficher les femmes
+  document.write("<ol>");
+  for (const person of texasss) {
+    if(person.gender==='f')
+      document.write("<li>"+person.name + "</li>");
+  }
+  document.write("</ol>");
+</script>
+ <!-------------------Array 2------------------->
+  <!-- Part 1 - List all users in US in ascending order  -->
+  <script>
+  const newieyork = [
+      { name: 'Michelle', age: 19,coder:true, gender: 'f', us: true,},
+      { name: 'Sam', age: 25,coder:false, gender: 'm', us: false, },
+      { name: 'Ivy', age: 26, coder:true,gender: 'f', us: false, },
+      { name: 'Nick', age: 32,  coder:true,gender: 'm', us: true, },
+      { name: 'Jim Beglin', age: 65, coder:false,gender: 'm', us: true, },
+    ];
+//   
+  document.write('<h4>all users in US in ascending order:</h4>'); 
+  document.write("<ol>");
+    for(const user of newieyork){
+    if(user.us===true)
+  document.write("<li>"+user.name + "</li>")
+   }
+   document.write("</ol>");
+  // Part 2 - Sort all users by age
+  document.write('<h4>all users by age:</h4>');
+   var age= ["19", "25", "26", "32","65"];
+      age.sort();     
+   document.write(age)
+  
+  // Part 3 -  List all female coders
+  document.write('<h4>all female coders:</h4>');
+  document.write("<ol>");
+   for(const user of newieyork){
+    if(user.gender==='f')
+    document.write("<li>"+ user.name + "</li>")
+   }
+   document.write("</ol>");
+  
+ </script>
+<!--------------------Array 3---------------------->
+ <script>
+    const vegzas = [
+    {name: 'Charly', age: 32, coder:true, gender: 'm',},
+    {name: 'Law',  age: 21, coder:true, gender: 'm',},
+    {name: 'Rosey', age: 42, coder:false, gender: 'f',},
+    {name: 'Steph', age: 18, coder:true, gender:'f'},
+    {name: 'Jon',  age: 47, coder:false, gender: 'm',},
+ ]
+
+  // Part 1 - Find the total age of male coders under 25
+  document.write('<h4>the total age of male coders under 25:</h4>');
+  document.write("<ul>");
+    var somme=0;
+
+  for (const element of vegzas) {
+    //Calcul Somme Age
+    somme = somme+ element.age;
+
+  }
+  //Afficher la somme ::
+  document.write("Le total est : "+somme);
+  document.write("<ol>");
+  for (const person of vegzas) {
+    if(person.age<25 && person.gender==='m')
+      document.write("<li>"+person.name + "</li>");
+  }
+  document.write("</ol>");
+  
+  // Part 2 - List all male coders over 30
+  document.write('<h4>all male coders over:</h4>');
+  document.write("<ol>");
+  for (const person of vegzas) {
+    if(person.age>30 && person.gender==='m')
+      document.write("<li>"+person.name + "</li>");
+  }
+  document.write("</ol>");
+
+  // Part 3 - Find the total age of everyone in texasss, newieyork and vegzas combined.
+  document.write('<h4>the total age of everyone in texass, newieyork and vegzas combined:</h4>');
+  const everyone=texasss.concat(newieyork,vegzas);
+  const totalage=everyone.reduce((total,objet) => total+objet.age,0);
+  document.write(totalage);
+ </script> 
+</body>
+</html>
+
+<!-- oui ms ghi lconsole
+ const older24Texas = texasss
+    .filter(user => user.age > 24);
+    document.write(older24Texas); -->
