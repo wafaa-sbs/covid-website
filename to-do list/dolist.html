@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>To do List</title>
+    <script>
+        alert("welcome to-do list");
+    </script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="title">
+            <h1>To-Do App</h1>
+        </div>
+        <div class="new-task-container box">
+            <label for="new-task">Add New Task</label>
+            <input class="inp" type="text" id="new-task">
+            <button id="addTask">Add Task</button>
+        </div>
+        
+        <div class="todo-list box">
+            <h2>Incomplete Tasks</h2>
+            <ul>
+                <li><input class="inpu" type="checkbox"><label>Task Name</lable></li>
+                <li><input class="inpu" type="checkbox"><label>Task Name</lable></li>
+                <li><input class="inpu" type="checkbox"><label>Task Name</lable></li>
+             </ul>
+        </div><!--/todo-list-->
+        
+        <div class="complete-list box">
+            <h2>Completed Tasks</h2>
+            <ul>
+                <li>Task Name <button class="delete">Delete</button></li>
+            </ul>
+        </div><!--/complete-list-->
+      </section><!--/container-->
+
+    <script src="script.js"></script>  
+</body>
+</html>
